@@ -9,26 +9,28 @@ const result = [
   { "city": "Los-Angeles", "weather": "Sunny" }
 ]
 
-describe.skip('API GET response for weather report per city', () => {
+describe('API GET response for weather report per city', () => {
   const report = getWeatherReport();
-  const getWeather = getWeather();
+  const weather = getWeather({ "Glasgow": [55.852059, -4.095055] });
   const distance = getDistance(55.852059, 33.517941, -111.689978, -4.095055);
 
   it('returns array with at least one object', () => {
     expect(Array.isArray(report)).toBe(true);
     expect(report.length > 0).toBe(true);
-    expect(report).toBe(result);
+    expect(report).toEqual(result);
   });
 
   it('returns an object, with city and weather property', () => {
-    const keys = Object.keys(getWeather);
-    const regex = /Sunny|Stormy|Cold|Chilly|Monsoon/;
+    const keys = Object.keys(weather);
+    const regexKeys = /city|weather/;
 
-    expect(typeof getWeather).toBe('object');
-    expect(!Array.isArray(getWeather)).toBe(true);
-    expect(keys.includes('city')).toBe(true);
-    expect(keys.includes('weather')).toBe(true);
-    expect(regex.test(keys)).toBe(true);
+    const weatherVals = Object.values(weather);
+    const regexWeather = /Sunny|Stormy|Cold|Chilly|Monsoon/;
+
+    expect(typeof weather).toBe('object');
+    expect(!Array.isArray(weather)).toBe(true);
+    expect(regexKeys.test(keys)).toBe(true);
+    expect(regexWeather.test(weatherVals)).toBe(true);
   });
 
   it('returns a calculated distance between lat/lon points', () => {
