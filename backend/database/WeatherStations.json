@@ -1,0 +1,34 @@
+[
+  {
+    "lat": "33.517941",
+    "lng": "-111.689978",
+    "weather": "Sunny",
+    "Location": "Arizona US"
+  },
+  {
+    "lat": "19.336835",
+    "lng": "-155.100255",
+    "weather": "Stormy",
+    "Location": "Hawaii"
+  },
+  {
+    "lat": "53.282845",
+    "lng": "-6.519751",
+    "weather": "Cold",
+    "Location": "Dublin"
+  },
+  {
+    "lat": "49.319554",
+    "lng": "2.538742",
+    "weather": "Chilly",
+    "Location": "France"
+  },
+  {
+    "lat": "23.696628",
+    "lng": "121.296179",
+    "weather": "Monsoon",
+    "Location": "Taiwan"
+  }
+]
+
+

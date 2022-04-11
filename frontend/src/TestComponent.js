@@ -9,6 +9,8 @@ function TestComponent() {
       .then((data) => setData(data.message));
   }, []);
 
+  console.log('return', data);
+
   return (
       <strong>{!data ? "Loading or Not Connected" : data}</strong>
   );
