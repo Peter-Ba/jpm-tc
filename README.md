@@ -7,6 +7,7 @@ Open two terminals and spin up both the backend then frontend servers.
 ```
 cd backend
 npm i
+npm run test
 npm run dev
 ```
 
