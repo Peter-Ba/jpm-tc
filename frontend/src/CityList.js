@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Spinner, WrapItem, Center, Wrap } from '@chakra-ui/react'
 import CityBio from './CityBio'
 
 function CityList() {
@@ -15,9 +16,9 @@ function CityList() {
   ))
 
   return (
-      <div>
-        { weatherList }
-      </div>
+    <Wrap spacing='30px'>
+      { weatherList ? weatherList : <Spinner size='xl' /> }
+    </Wrap> 
   );
 }
 

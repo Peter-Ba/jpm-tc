@@ -1,11 +1,18 @@
 import React from 'react';
 import CityList from './CityList';
-import './App.css';
+import { Heading, Text } from '@chakra-ui/react'
 
 function App() {
   return (
     <div className="App">
-      <h1>Weather Report</h1>
+    <Text
+      bgGradient="linear(to-l, #ffeb3b, #FF0080)"
+      bgClip="text"
+      fontSize="6xl"
+      fontWeight="extrabold"
+    >
+        Weather Report
+      </Text>
       <CityList/>
     </div>
   );
